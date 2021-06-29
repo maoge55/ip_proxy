@@ -14,7 +14,7 @@ namespace WebApplication1.Controllers
         // GET api/<controller>
         public DataTable Get()
         {
-            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=E:\ftp\WebApplication1\ipcrz\dbs\amazon.db3"))
+            using (SQLiteConnection connection = new SQLiteConnection(@"Data Source=D:\ip_proxy\ip_proxy\WebApplication1\ipcrz\dbs\amazon.db3"))
             {
                 connection.Open();
                 string sql = "select ip from ips order by ping";
@@ -31,7 +31,7 @@ namespace WebApplication1.Controllers
         // GET api/<controller>/5
         public DataTable Get(string id)
         {
-            string strgd = @"Data Source=E:\datatwo\VSProgram\WebApplication1\ipcrz\dbs\";
+            string strgd = @"Data Source=D:\ip_proxy\ip_proxy\WebApplication1\ipcrz\dbs\";
             string db = strgd + id+@".db3";
             using (SQLiteConnection connection = new SQLiteConnection(db))
             {
